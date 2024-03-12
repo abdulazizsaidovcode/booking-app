@@ -6,7 +6,7 @@ const MaindashboardSidebar = () => {
     const normalLinkClass = "text-gray-600 hover:bg-orange-100";
 
     return (
-        <div className="h-screen shadow bg-white rounded-lg overflow-y-auto w-64 ">
+        <div className="h-screen shadow bg-white rounded-lg overflow-y-auto w-full col-span-1">
             <div className="px-6 py-8 flex items-center h-max">
                 <img
                     src="/path-to-profile-picture.jpg" // Profil rasmingiz yo'lini kiriting

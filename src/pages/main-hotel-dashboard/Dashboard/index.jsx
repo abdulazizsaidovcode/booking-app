@@ -3,7 +3,7 @@ import React from 'react';
 // Har bir statistika kartochkasini ifodalovchi komponent
 const StatCard = ({ icon, number, label }) => {
   return (
-    <div className="flex flex-col items-center justify-center bg-white rounded-lg shadow p-4">
+    <div className="flex flex-col items-center justify-center  p-4">
       <div className={`text-4xl ${iconColor(icon)}`}>{icon}</div>
       <div className="mt-2 text-3xl font-semibold">{number}</div>
       <div className="text-md text-gray-700">{label}</div>
@@ -29,23 +29,86 @@ const iconColor = (icon) => {
 };
 
 // Asosiy dashboard komponenti
-const Dashboard = () => {
+const HotelDashboard = () => {
   // Statistik ma'lumotlarni o'z ichiga oluvchi massiv
-  const stats = [
-    { icon: '🛏️', number: 31, label: 'Total Rooms' },
-    { icon: '🧳', number: 4, label: 'Room Types' },
-    // Qolgan statistik ma'lumotlar qo'shing
-  ];
 
   return (
-    <div className="p-6 bg-orange-100">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {stats.map((stat) => (
-          <StatCard key={stat.label} icon={stat.icon} number={stat.number} label={stat.label} />
-        ))}
+    <div className="p-6 bg-orange-100 w-full h-full  rounded-xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-5">
+        {/* cards */}
+        <div className="flex flex-col items-center justify-center  p-4 border-r-2 border-gray-500">
+          <div className={`text-4xl `}>🛏️</div>
+          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="text-md text-gray-700">Total Rooms</div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center  p-4 border-r-2 border-gray-500">
+          <div className={`text-4xl `}>🛏️</div>
+          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="text-md text-gray-700">Total Rooms</div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center  p-4 border-r-2 border-gray-500">
+          <div className={`text-4xl `}>🛏️</div>
+          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="text-md text-gray-700">Total Rooms</div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center  p-4">
+          <div className={`text-4xl `}>🛏️</div>
+          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="text-md text-gray-700">Total Rooms</div>
+        </div>
+
       </div>
+
+      <div className='border border-gray-500 w-full'></div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-5">
+        {/* cards */}
+        <div className="flex flex-col items-center justify-center  p-4 border-r-2 border-gray-500">
+          <div className={`text-4xl `}>🛏️</div>
+          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="text-md text-gray-700">Total Rooms</div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center  p-4 border-r-2 border-gray-500">
+          <div className={`text-4xl `}>🛏️</div>
+          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="text-md text-gray-700">Total Rooms</div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center  p-4 border-r-2 border-gray-500">
+          <div className={`text-4xl `}>🛏️</div>
+          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="text-md text-gray-700">Total Rooms</div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center  p-4">
+          <div className={`text-4xl `}>🛏️</div>
+          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="text-md text-gray-700">Total Rooms</div>
+        </div>
+
+      </div>
+
+      <div className='border border-gray-500 w-full'></div>
+
+      <div className='grid grid-cols-2 py-5'>
+        <div className="flex flex-col col-span-1 items-center justify-center p-4 border-r-2 border-gray-500">
+          <div className={`text-4xl `}>🛏️</div>
+          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="text-md text-gray-700">Total Rooms</div>
+        </div>
+        <div className="flex flex-col items-center justify-center  p-4">
+          <div className={`text-4xl `}>🛏️</div>
+          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="text-md text-gray-700">Total Rooms</div>
+        </div>
+      </div>
+
     </div>
   );
 };
 
-export default Dashboard;
+export default HotelDashboard;
