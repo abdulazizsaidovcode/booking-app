@@ -8,6 +8,7 @@ import HotelDashboardDescription from './hotel-description';
 import { MainDashboardManageRooms } from './magage-rooms';
 import { MainDashboardNavigation } from './components/navigation';
 import MainDashboardRoomForm from './magage-rooms/addnewroom';
+import TableComponent from './hotelmanager-dashboard';
 
 export const MainHotelDashboard = () => {
 
@@ -27,7 +28,8 @@ export const MainHotelDashboard = () => {
                 {/* <HotelDashboardManageServises /> */}
                 {/* <MainHotelMyAccount/> */}
                 {/* <HotelDashboardDescription/> */}
-                <MainDashboardManageRooms/>
+                {/* <MainDashboardManageRooms/> */}
+                <TableComponent/>
                 {/* <MainDashboardRoomForm/> */}
 
             </div>
