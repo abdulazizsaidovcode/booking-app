@@ -44,7 +44,9 @@ export const MainDashboardManageRooms = () => {
                     <MainHotelDashboardButton width="w-32" height="h-10" icon={<i className="fa fa-user" />}>Add room</MainHotelDashboardButton>
                 </div>
             </div>
-            <div className='border w-full my-5'></div>
+            <div className='border w-full my-5'>
+                <input type="text" />
+            </div>
 
             <div className='mb-10'>
                 <div className='flex justify-between items-center'>
