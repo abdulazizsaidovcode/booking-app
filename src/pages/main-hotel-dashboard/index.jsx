@@ -25,12 +25,13 @@ export const MainHotelDashboard = () => {
                 <div className='py-5'>
                     <MainDashboardNavigation/>
                 </div>
+                {/* <HotelDashboard/> */}
                 {/* <HotelDashboardManageServises /> */}
                 {/* <MainHotelMyAccount/> */}
                 {/* <HotelDashboardDescription/> */}
                 {/* <MainDashboardManageRooms/> */}
-                <TableComponent/>
-                {/* <MainDashboardRoomForm/> */}
+                {/* <TableComponent/> */}
+                <MainDashboardRoomForm/>
 
             </div>
         </section>

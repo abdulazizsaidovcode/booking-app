@@ -65,8 +65,8 @@ const MainDashboardRoomForm = () => {
             onChange={handleInputChange}
             className="w-full border-2 border-gray-300 p-2 rounded-md bg-white"
           >
+            <option value="normal">normal</option>
             <option value="Premium">Premium</option>
-            {/* Add other room types here */}
           </select>
           <label className="block mt-4 mb-2 font-medium text-gray-700">Room Description</label>
           <textarea

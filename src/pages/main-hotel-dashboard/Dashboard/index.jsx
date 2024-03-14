@@ -1,4 +1,6 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Api } from '../components/api';
 
 // Har bir statistika kartochkasini ifodalovchi komponent
 const StatCard = ({ icon, number, label }) => {
@@ -28,17 +30,30 @@ const iconColor = (icon) => {
   return color;
 };
 
+
 // Asosiy dashboard komponenti
 const HotelDashboard = () => {
-  // Statistik ma'lumotlarni o'z ichiga oluvchi massiv
 
+  const [allRooms, setAllRooms] = useState(0);
+  useEffect(() => {
+    getAllRooms()
+  }, [])
+  
+  function getAllRooms() {
+    axios.get(`${Api}manage-hotels-dashboard-rooms `)
+      .then((res) => {
+        setAllRooms(res.data.length);
+      }).catch((err) => {
+        console.error(err);
+      })
+  }
   return (
     <div className="p-6 bg-orange-100 w-full h-full  rounded-xl">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-5">
         {/* cards */}
         <div className="flex flex-col items-center justify-center  p-4 border-r-2 border-gray-500">
           <div className={`text-4xl `}>🛏️</div>
-          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="mt-2 text-3xl font-semibold">{allRooms}</div>
           <div className="text-md text-gray-700">Total Rooms</div>
         </div>
 
@@ -50,7 +65,7 @@ const HotelDashboard = () => {
 
         <div className="flex flex-col items-center justify-center  p-4 border-r-2 border-gray-500">
           <div className={`text-4xl `}>🛏️</div>
-          <div className="mt-2 text-3xl font-semibold">43</div>
+          <div className="mt-2 text-3xl font-semibold">2</div>
           <div className="text-md text-gray-700">Total Rooms</div>
         </div>
 

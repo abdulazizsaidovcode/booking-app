@@ -4,7 +4,9 @@ import { FaPlus, FaTrash, FaEllipsisV } from 'react-icons/fa';
 const TableComponent = () => {
   // Jadval ma'lumotlari uchun o'zgartiruvchi
   const [items, setItems] = useState([
-    { id: '#1', name: 'Cappuccino(iced)', category: 'Coffee', price: '2500.00 RWF', quantity: 20 },
+    { id: '#1', name: 'Cappuccino(iced)', category: 'Coffee', price: '2500.00 RWF', quantity: 10 },
+    { id: '#2', name: 'Cappuccino(iced)', category: 'Coffee', price: '2500.00 RWF', quantity: 20 },
+    { id: '#3', name: 'Cappuccino(iced)', category: 'Coffee', price: '2500.00 RWF', quantity: 30 },
     // ... Qolgan ma'lumotlar
   ]);
 
