@@ -6,6 +6,8 @@ import MainHotelMyAccount from './my-accaunt';
 import HotelDashboardManageServises from './manage-serveses';
 import HotelDashboardDescription from './hotel-description';
 import { MainDashboardManageRooms } from './magage-rooms';
+import { MainDashboardNavigation } from './components/navigation';
+import MainDashboardRoomForm from './magage-rooms/addnewroom';
 
 export const MainHotelDashboard = () => {
 
@@ -19,10 +21,15 @@ export const MainHotelDashboard = () => {
 
             <MaindashboardSidebar />
             <div className='col-span-3'>
+                <div className='py-5'>
+                    <MainDashboardNavigation/>
+                </div>
                 {/* <HotelDashboardManageServises /> */}
                 {/* <MainHotelMyAccount/> */}
                 {/* <HotelDashboardDescription/> */}
                 <MainDashboardManageRooms/>
+                {/* <MainDashboardRoomForm/> */}
+
             </div>
         </section>
     )
